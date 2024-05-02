@@ -1,0 +1,165 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #eee;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Hero section */
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-image: url('../img/header.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .logo {
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+.hero-section .sub-heading {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+/* Product section */
+.product-section {
+  padding: 20px;
+}
+
+.product-section h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: auto;
+  grid-row-gap: 40px;
+}
+
+.product-card {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  box-shadow: 0px 0px 20pxrgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f00;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.product-button {
+  display: inline-block;
+  background-color: #f00;
+  color: #fff;
+  padding: 10pxrgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height:  20px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+/*{
+  object-fit:cover;
+}
+*/
+.product-info {
+  padding: 10px ;
+}
+
+.product-button:hover {
+  background-color:  15px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 100;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f00;
+ margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.product-button {
+  display: inline-block;
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-button:hover {
+  background-color: rgb(228, 5, 5);
+}

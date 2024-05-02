@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>User Profile</title>
+</head>
+<body>
+  <header class="hero-section">
+    <div class="content">
+      <img src="img/light-logo.png" class="logo" alt="">
+      <p class="sub-heading">Welcome to your profile page</p>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <div class="profile-image">
+      <img id="profile-picture" src="img/profile-image.jpg" alt="Profile Image">
+      <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+      <button id="change-picture-button">Change Picture</button>
+      <button id="delete-picture-button">Delete Picture</button>
+    </div>
+    <div class="profile-info">
+      <form id="profile-form">
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" value="John Doe">
+
+        <label for="address-input">Address:</label>
+        <input type="text" id="address-input" value="123 Main St, Anytown, USA">
+
+        <button type="submit">Save Changes</button>
+      </form>
+      <button class="my-orders-button">My Orders</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-title">About Company</p>
+    <p class="info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci iusto voluptatibus quidem.
+    </p>
+  </footer>
+
+  <script>
+    const profilePictureInput = document.querySelector('#profile-picture-input');
+    const changePictureButton = document.querySelector('#change-picture-button');
+    const deletePictureButton = document.querySelector('#delete-picture-button');
+
+    changePictureButton.addEventListener('click', () => {
+      profilePictureInput.click();
+    });
+
+    profilePictureInput.addEventListener('change', () => {
+      const file = profilePictureInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (event) => {
+        const img = document.querySelector('#profile-picture');
+        img.src = event.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+
+    deletePictureButton.addEventListener('click', () => {
+      const img = document.querySelector('#profile-picture');
+      img.src = 'img/profile-image.jpg';
+    });
+
+    const form = document.querySelector('#profile-form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const nameInput = document.querySelector('#name-input');
+      const addressInput = document.querySelector('#address-input');
+
+      console.log(`Name: ${nameInput.value}`);
+      console.log(`Address: ${addressInput.value}`);
+
+      // Save changes to the server
+    });
+
+    const myOrdersButton = document.querySelector('.my-orders-button');
+    myOrdersButton.addEventListener('click', () => {
+      // Navigateto the orders page
+    });
+  </script>
+</body>
+</html>*/
